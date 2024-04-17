@@ -55,3 +55,8 @@
     color:#7e7e7e;
     transition: .2s ease-in;
 }
+.carrousel-size {
+    width:75%;
+    height:350px;
+    object-fit: cover;
+}
