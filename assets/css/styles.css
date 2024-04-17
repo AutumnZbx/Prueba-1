@@ -60,3 +60,36 @@
     height:350px;
     object-fit: cover;
 }
+.busqueda {
+  background-color:#ececec;
+  width:25%;
+  height:500px;
+  margin-right:2rem;
+}
+.autos-display {
+  width:75%;
+}
+.autos {
+  flex-direction:row;
+}
+/* AQUI VAN LOS MEDIA QUERYS*/
+@media (max-width: 768px){
+  .autos {
+    flex-direction:column !important;
+    align-items:center;
+  }
+  .busqueda {
+    width:100%;
+    margin:0 auto;
+  }
+  .autos-display {
+    width:100%;
+  }
+  .ficha-auto {
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    margin-top:1rem;
+    max-width:700px;
+  }
+}

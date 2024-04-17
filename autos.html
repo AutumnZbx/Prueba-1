@@ -29,6 +29,104 @@
         </div>
     </nav>
     <!--POR LLENAR-->
+    <main class="container-fluid mt-5 p-4 d-flex autos">
+        <aside class="busqueda rounded border p-3">
+            <form>
+                <div class="mb-3">
+                    <label for="busqueda-marca" class="form-label">Búsqueda por Marca</label>
+                    <select class="form-select" aria-label="Default select example" id="busqueda-marca">
+                        <option selected>Marca</option>
+                        <option value="1">Alfa Romeo</option>
+                        <option value="2">Audi</option>
+                        <option value="3">BMW</option>
+                        <option value="4">Jaguar</option>
+                        <option value="5">Land Rover</option>
+                        <option value="6">Lexus</option>
+                        <option value="7">Mercedes Benz</option>
+                      </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </aside>
+        <div class="row autos-display">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/mercedes/e300.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Mercedes Benz E300</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 LOOK AMG AT 4P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$25.500.000</h5>
+                        <a href="#" class="card-link btn btn-secondary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/lexus/rx350.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Lexus RX350</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">3.5 L 4WD AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$26.500.000</h5>
+                        <a href="#" class="card-link btn btn-secondary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/audi/q2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Audi Q2</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">1.4 TFSI S-TRONIC AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$16.500.000</h5>
+                        <a href="#" class="card-link btn btn-secondary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/bmw/x4.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">BMW X4</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 X-DRIVE 20I M AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$27.500.000</h5>
+                        <a href="#" class="card-link btn btn-secondary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/land-rover/range.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Land Rover Range Rover</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 VELAR S AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$37.500.000</h5>
+                        <a href="#" class="card-link btn btn-secondary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/jaguar/f-pace.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Jaguar F-Pace</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 PRESTIGE DIESEL 4X4 AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$31.500.000</h5>
+                        <a href="#" class="card-link btn btn-secondary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
     <div class="container-fluid">
         <div class="row d-flex justify-content-center p-2">
             <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
