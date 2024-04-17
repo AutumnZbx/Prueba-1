@@ -72,6 +72,10 @@
 .autos {
   flex-direction:row;
 }
+.encabezado {
+  background-color:rgb(78, 83, 175);
+  color:white;
+}
 /* AQUI VAN LOS MEDIA QUERYS*/
 @media (max-width: 768px){
   .autos {
