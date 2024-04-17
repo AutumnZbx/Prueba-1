@@ -6,17 +6,21 @@
     <title>Autos del Mar - Compra Venta de Vehículos</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Fuente de texto NO SACAR-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fin Fuente texto-->
 </head>
 <body>
     <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Autos del Mar</a>
+            <a class="navbar-brand kanit-semibold" href="#">Autos del Mar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+                <div class="navbar-nav kanit-regular">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="#">Autos</a>
                     <a class="nav-link" href="#">Ingresar</a>
@@ -29,16 +33,16 @@
     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000">
-            <img src="./assets/img/auto1.jpg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
+            <img src="./assets/img/carrousel1.jpg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
           </div>
           <div class="carousel-item" data-bs-interval="2000">
-            <img src="./assets/img/auto2.jpg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
+            <img src="./assets/img/carrousel2.jpg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img src="./assets/img/auto3.jpeg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
+            <img src="./assets/img/carrousel3.jpg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
           </div>
           <div class="carousel-item">
-            <img src="./assets/img/auto4.jpg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
+            <img src="./assets/img/carrousel4.jpg" class="d-block w-100" alt="..."style="width: 75%; height: 500px;object-fit: cover;">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -50,8 +54,75 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-<script src="/assets/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+    <div class="container-fluid presentacion">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-5 d-flex flex-column justify-content-center">
+                <h2 class="kanit-bold">Tenemos el auto que estás buscando</h2>
+                <p class="kanit-light">Si buscas el auto de tus sueños, has llegado al lugar correcto.<br>
+                Contamos con una gran variedad en modelos para toda ocasión.</p>
+                <a class="btn btn-outline-light kanit-regular" href="#">Ver Vehículos</a>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-0 d-flex justify-content-end">
+                <img src="/assets/img/auto-pres.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center p-2">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/alfa_romeo.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/audi.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/bmw.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/landrover.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/lexus.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/mercedes.png" class="marcas mx-auto" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid footer p-3">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4 class="kanit-regular">Acerca de Nosotros</h4>
+                <p class="kanit-light">Somos una automotora independiente que desde 2005 nos hemos dedicado a la venta de vehiculos de alta gama.<br><br>
+                Nuestro objetivo es brindar el mejor servicio desde la elección del vehículo, hasta la postventa, donde nos preocupamos de que usted se lleve el auto de sus sueños.
+                </p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 d-flex flex-column align-items-center">
+                <ul>
+                    <li><h4 class="kanit-regular">Dirección</h4></li>
+                    <li><p class="kanit-light">Calle Falsa 123 - Huechuraba</p></li>
+                    <li><h4 class="kanit-regular">Teléfonos</h4></li>
+                    <li><p class="kanit-light">+56 981744765</p></li>
+                    <li><p class="kanit-light">+56 981744765</p></li>
+                    <li><h4 class="kanit-regular">E-mail</h4></li>
+                    <li><p class="kanit-light">ventas@autosdelmar.cl</p></li>
+                </ul>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4 class="text-center d-flex justify-content-center kanit-regular">Síguenos en nuestras redes</h4>
+                <ul class="d-flex justify-content-around p-0 mt-4">
+                    <li><a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube fa-2xl"></i></a></li> 
+                </ul>
+                
+            </div>
+        </div>
+        
+    </footer>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/b579bdb183.js" crossorigin="anonymous"></script>
 </body>
 </html>

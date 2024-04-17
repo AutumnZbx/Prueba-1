@@ -1,0 +1,57 @@
+.kanit-thin {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .kanit-semibold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .presentacion {
+    background-color:rgb(78, 83, 175);
+    color:white;
+}
+  .marcas {
+    width:40%;
+  }
+  .footer {
+    background-color: #2b3035;
+    color:white;
+  }
+  .footer ul {
+    list-style: none;
+  }
+.footer i {
+    color:white;
+}
+.footer i:hover{
+    cursor:pointer;
+    color:#7e7e7e;
+    transition: .2s ease-in;
+}
