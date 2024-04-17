@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos del Mar - Compra Venta de Vehículos</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Fuente de texto NO SACAR-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fin Fuente texto-->
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand kanit-semibold" href="#">Autos del Mar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav kanit-regular">
+                    <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    <a class="nav-link" href="/autos.html">Autos</a>
+                    <a class="nav-link" href="/login.html">Ingresar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="container-fluid mt-5 p-3 encabezado">
+        <h1 class="text-center kanit-semibold">Autos</h1>
+    </header>
+    <main class="container-fluid mt-1 p-4 d-flex autos">
+        <aside class="busqueda rounded border p-3">
+            <form>
+                <div class="mb-3">
+                    <label for="busqueda-marca" class="form-label kanit-regular">Búsqueda por Marca</label>
+                    <select class="form-select kanit-light" aria-label="Default select example" id="busqueda-marca">
+                        <option selected>Marca</option>
+                        <option value="1">Alfa Romeo</option>
+                        <option value="2">Audi</option>
+                        <option value="3">BMW</option>
+                        <option value="4">Jaguar</option>
+                        <option value="5">Land Rover</option>
+                        <option value="6">Lexus</option>
+                        <option value="7">Mercedes Benz</option>
+                      </select>
+                </div>
+                <div class="mb-3">
+                  <label for="busqueda-nombre" class="form-label kanit-regular">Buscar por Nombre</label>
+                  <input type="search" class="form-control kanit-light" id="busqueda-nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="busqueda-precio" class="form-label kanit-regular">Búsqueda por Marca</label>
+                    <select class="form-select kanit-light" aria-label="Default select example" id="busqueda-precio">
+                        <option selected>Precio</option>
+                        <option value="1">$0 - $5.000.000</option>
+                        <option value="2">$5.000.000 - $10.000.000</option>
+                        <option value="3">$10.000.000 - $15.000.000</option>
+                        <option value="4">$15.000.000 - $20.000.000</option>
+                        <option value="5">$20.000.000 - $25.000.000</option>
+                        <option value="6">$25.000.000 - $30.000.000</option>
+                        <option value="7">$30.000.000 o más</option>
+                      </select>
+                </div>
+                <button type="submit" class="btn btn-primary kanit-semibold">Buscar</button>
+              </form>
+        </aside>
+        <div class="row autos-display">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/mercedes/e300.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Mercedes Benz E300</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 LOOK AMG AT 4P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$25.500.000</h5>
+                        <a href="#" class="card-link btn btn-primary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/lexus/rx350.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Lexus RX350</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">3.5 L 4WD AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$26.500.000</h5>
+                        <a href="#" class="card-link btn btn-primary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/audi/q2.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Audi Q2</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">1.4 TFSI S-TRONIC AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$16.500.000</h5>
+                        <a href="#" class="card-link btn btn-primary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/bmw/x4.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">BMW X4</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 X-DRIVE 20I M AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$27.500.000</h5>
+                        <a href="#" class="card-link btn btn-primary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/land-rover/range.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Land Rover Range Rover</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 VELAR S AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$37.500.000</h5>
+                        <a href="#" class="card-link btn btn-primary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto" style="width: 18rem;">
+                    <img src="/assets/img/jaguar/f-pace.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Jaguar F-Pace</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">2.0 PRESTIGE DIESEL 4X4 AT 5P</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$31.500.000</h5>
+                        <a href="#" class="card-link btn btn-primary d-flex justify-content-center kanit-semibold">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <div class="container-fluid">
+        <div class="row d-flex justify-content-center p-2">
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/alfa_romeo.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/audi.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/bmw.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/landrover.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/lexus.png" class="marcas mx-auto" alt="">
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 d-flex">
+                <img src="/assets/img/mercedes.png" class="marcas mx-auto" alt="">
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid footer p-3">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4 class="kanit-regular">Acerca de Nosotros</h4>
+                <p class="kanit-light">Somos una automotora independiente que desde 2005 nos hemos dedicado a la venta de vehiculos de alta gama.<br><br>
+                Nuestro objetivo es brindar el mejor servicio desde la elección del vehículo, hasta la postventa, donde nos preocupamos de que usted se lleve el auto de sus sueños.
+                </p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 d-flex flex-column align-items-center">
+                <ul>
+                    <li><h4 class="kanit-regular">Dirección</h4></li>
+                    <li><p class="kanit-light">Calle Falsa 123 - Huechuraba</p></li>
+                    <li><h4 class="kanit-regular">Teléfonos</h4></li>
+                    <li><p class="kanit-light">+56 981744765</p></li>
+                    <li><p class="kanit-light">+56 981744765</p></li>
+                    <li><h4 class="kanit-regular">E-mail</h4></li>
+                    <li><p class="kanit-light">ventas@autosdelmar.cl</p></li>
+                </ul>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4 class="text-center d-flex justify-content-center kanit-regular">Síguenos en nuestras redes</h4>
+                <ul class="d-flex justify-content-around p-0 mt-4">
+                    <li><a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2xl"></i></a></li> 
+                </ul>
+                
+            </div>
+        </div>
+        
+    </footer>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/b579bdb183.js" crossorigin="anonymous"></script>
+</body>
+</html>

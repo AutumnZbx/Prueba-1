@@ -1,0 +1,119 @@
+.kanit-thin {
+    font-family: "Kanit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kanit-medium {
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .kanit-semibold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .presentacion {
+    background-color:rgb(78, 83, 175);
+    color:white;
+}
+.presentacion img {
+  width:70%;
+}
+  .marcas {
+    width:40%;
+  }
+  .footer {
+    background-color: #2b3035;
+    color:white;
+  }
+  .footer ul {
+    list-style: none;
+  }
+.footer i {
+    color:white;
+}
+.footer i:hover{
+    cursor:pointer;
+    color:#7e7e7e;
+    transition: .2s ease-in;
+}
+.carrousel-size {
+    width:75%;
+    height:350px;
+    object-fit: cover;
+}
+.busqueda {
+  background-color:#ececec;
+  width:25%;
+  height:500px;
+  margin-right:2rem;
+}
+.autos-display {
+  width:75%;
+}
+.autos {
+  flex-direction:row;
+}
+.encabezado {
+  background-color:rgb(78, 83, 175);
+  color:white;
+}
+/* AQUI VAN LOS MEDIA QUERYS*/
+@media (max-width: 768px){
+  .autos {
+    flex-direction:column !important;
+    align-items:center;
+  }
+  .busqueda {
+    width:100%;
+    margin:0 auto;
+  }
+  .autos-display {
+    width:100%;
+  }
+  .ficha-auto {
+    display:flex;
+    justify-content:center;
+    margin:0 auto;
+    margin-top:1rem;
+    max-width:700px;
+  }
+  .presentacion img {
+    width:100%;
+  }
+}
+
+
+/*Para modificar login*/
+.nav{
+  margin: 0 auto;
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+.tab-content{
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
