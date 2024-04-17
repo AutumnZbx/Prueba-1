@@ -37,6 +37,9 @@
     background-color:rgb(78, 83, 175);
     color:white;
 }
+.presentacion img {
+  width:70%;
+}
   .marcas {
     width:40%;
   }
@@ -95,5 +98,8 @@
     margin:0 auto;
     margin-top:1rem;
     max-width:700px;
+  }
+  .presentacion img {
+    width:100%;
   }
 }
