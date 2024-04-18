@@ -4,77 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autos del Mar - Compra Venta de Vehículos</title>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- Fuente de texto NO SACAR-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- MDB -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- Fin Fuente texto-->
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-        <div class="container-fluid">
-            <a class="navbar-brand kanit-semibold" href="#">Autos del Mar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav kanit-regular">
-                    <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                    <a class="nav-link" href="/autos.html">Autos</a>
-                    <a class="nav-link" href="/login.html">Ingresar</a>
-                </div>
+  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand kanit-semibold" href="#">Autos del Mar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav kanit-regular">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                <a class="nav-link" href="/autos.html">Autos</a>
+                <a class="nav-link" href="/login.html">Ingresar</a>
             </div>
         </div>
-    </nav>
+    </div>
+  </nav>
     
 
     <!--Login -->
-    <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a class="nav-link active" id="tab-login" data-mdb-pill-init href="#pills-login" role="tab"
-            aria-controls="pills-login" aria-selected="true">Login</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="tab-register" data-mdb-pill-init href="#pills-register" role="tab"
-            aria-controls="pills-register" aria-selected="false">Registrarse</a>
-        </li>
-      </ul>
-      
+    <div class="container-fluid d-flex justify-content-center">
+      <ul class="nav nav-pills nav-justified mb-3 d-flex justify-content-center ms-0 me-0" id="ex1" role="tablist">
+          <li class="nav-item me-2" role="presentation">
+            <a class="nav-link active kanit-regular" id="tab-login" data-mdb-pill-init href="#pills-login" role="tab"
+              aria-controls="pills-login" aria-selected="true">Login</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link kanit-regular" id="tab-register" data-mdb-pill-init href="#pills-register" role="tab"
+              aria-controls="pills-register" aria-selected="false">Registrarse</a>
+          </li>
+        </ul>
+    </div>
       <div class="tab-content">
         <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
           <form>
-            <div class="text-center mb-3">
-              <p>Sign in with:</p>
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <div class="text-center mb-3 kanit-regular">
+              <p>Ingresar con:</p>
+              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1 rs-botones">
                 <i class="fab fa-facebook-f"></i>
               </button>
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1 rs-botones">
                 <i class="fab fa-google"></i>
               </button>
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1 rs-botones">
                 <i class="fab fa-twitter"></i>
-              </button>
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                <i class="fab fa-github"></i>
               </button>
             </div>
       
-            <p class="text-center">o:</p>
+            <p class="text-center kanit-regular">o:</p>
       
             <!-- Email input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="email" id="loginName" class="form-control" />
-              <label class="form-label" for="loginName">Email or usuario</label>
+              <label class="form-label kanit-regular" for="loginName">Email o usuario</label>
             </div>
       
             <!-- Password input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="password" id="loginPassword" class="form-control" />
-              <label class="form-label" for="loginPassword">Contraseña</label>
+              <label class="form-label kanit-regular" for="loginPassword">Contraseña</label>
             </div>
       
             <!-- 2 column grid layout -->
@@ -83,86 +81,79 @@
                 <!-- Checkbox -->
                 <div class="form-check mb-3 mb-md-0">
                   <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-                  <label class="form-check-label" for="loginCheck"> Recordarme </label>
+                  <label class="form-check-label kanit-regular" for="loginCheck"> Recordarme </label>
                 </div>
               </div>
       
               <div class="col-md-6 d-flex justify-content-center">
-                <a href="#!">Olvidaste tu contraseña?</a>
+                <a class="kanit-regular" href="#!">Olvidaste tu contraseña?</a>
               </div>
             </div>
       
-            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Iniciar seccion</button>
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 kanit-regular">Iniciar sesión</button>
       
-            <div class="text-center">
-              <p>No estas registrado? <a href="#!">Registrate</a></p>
-            </div>
           </form>
         </div>
         <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
           <form>
-            <div class="text-center mb-3">
-              <p>Sign up with:</p>
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+            <div class="text-center mb-3 kanit-regular">
+              <p>Registrarse con:</p>
+              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1 rs-botones">
                 <i class="fab fa-facebook-f"></i>
               </button>
       
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1 rs-botones">
                 <i class="fab fa-google"></i>
               </button>
       
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
+              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1 rs-botones">
                 <i class="fab fa-twitter"></i>
-              </button>
-      
-              <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-floating mx-1">
-                <i class="fab fa-github"></i>
               </button>
             </div>
       
-            <p class="text-center">or:</p>
+            <p class="text-center kanit-regular">o:</p>
       
             <!-- Name input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="text" id="registerName" class="form-control" />
-              <label class="form-label" for="registerName">Nombre</label>
+              <label class="form-label kanit-regular" for="registerName">Nombre</label>
             </div>
       
             <!-- Username input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="text" id="registerUsername" class="form-control" />
-              <label class="form-label" for="registerUsername">Usuario</label>
+              <label class="form-label kanit-regular" for="registerUsername">Usuario</label>
             </div>
       
             <!-- Email input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="email" id="registerEmail" class="form-control" />
-              <label class="form-label" for="registerEmail">Email</label>
+              <label class="form-label kanit-regular" for="registerEmail">Email</label>
             </div>
       
             <!-- Password input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="password" id="registerPassword" class="form-control" />
-              <label class="form-label" for="registerPassword">Contraseña</label>
+              <label class="form-label kanit-regular" for="registerPassword">Contraseña</label>
             </div>
       
             <!-- Repeat Password input -->
             <div data-mdb-input-init class="form-outline mb-4">
               <input type="password" id="registerRepeatPassword" class="form-control" />
-              <label class="form-label" for="registerRepeatPassword">Repita la contraseña</label>
+              <label class="form-label kanit-regular" for="registerRepeatPassword">Repita la contraseña</label>
             </div>
       
             <!-- Checkbox -->
             <div class="form-check d-flex justify-content-center mb-4">
               <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
                 aria-describedby="registerCheckHelpText" />
-              <label class="form-check-label" for="registerCheck">
+              <label class="form-check-label kanit-regular" for="registerCheck">
                 He leido los terminos y condiciones.
               </label>
             </div>
       
             <!-- Submit button -->
-            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-3">Registrarme</button>
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-3 kanit-regular">Registrarme</button>
           </form>
         </div>
       </div>        
