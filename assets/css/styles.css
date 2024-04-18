@@ -34,7 +34,7 @@
   font-style: normal;
 }
 .presentacion {
-  background-color:rgb(78, 83, 175);
+  background-color:rgb(175, 128, 78);
   color:white;
 }
 .presentacion img {
@@ -65,19 +65,21 @@
 }
 .busqueda {
   background-color:#ececec;
-  width:25%;
-  height:500px;
+  width:20%;
   margin-right:2rem;
 }
 .autos-display {
-  width:75%;
+  width:80%;
 }
 .autos {
   flex-direction:row;
 }
 .encabezado {
-  background-color:rgb(78, 83, 175);
+  background-color:rgb(175, 128, 78);
   color:white;
+}
+.ficha-auto {
+  width:15rem;
 }
 
 /*Para modificar login*/

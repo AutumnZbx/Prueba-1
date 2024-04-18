@@ -1,11 +1,192 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JDC - Compra tus Zapatos</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Fuente de texto NO SACAR-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Fin Fuente texto-->
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">JDC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Zapatillas.html">Zapatillas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Zapatos.html">Zapatos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="container-fluid p-3 encabezado">
+        <h1 class="text-center kanit-semibold">Zapatillas</h1>
+    </header>
+    <main class="container-fluid mt-1 p-4 d-flex autos">
+        <aside class="busqueda rounded border p-3">
+            <form>
+                <div class="mb-3">
+                    <h6 class="kanit-regular">Filtrar por Marca</h6>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Nike</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Adidas</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Vans</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">DC</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Skechers</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Puma</label>
+                </div>
+                <div class="mb-3">
+                    <h6 class="kanit-regular">Filtrar por Precio</h6>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Menos de $15.000</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">$15.000 a $35.000</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">$35.000 a $55.000</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">$55.000 a $75.000</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">$75.000 a $95.000</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">$95.000 y más</label>
+                </div>
+                <div class="mb-3">
+                    <h6 class="kanit-regular">Filtrar por Género </h6>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Hombre</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Mujer</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="nike" id="nikeCheck">
+                    <label for="busqueda-marca" class="form-label kanit-light">Unisex</label>
+                </div>
+            </form>
+        </aside>
+        <div class="row autos-display">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto">
+                    <img src="/assets/img/vans/vans-classic.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Vans Old Skool Negro</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">Vans</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$60.990</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto">
+                    <img src="/assets/img/vans/vans-classic.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Vans Old Skool Negro</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">Vans</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$60.990</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto">
+                    <img src="/assets/img/vans/vans-classic.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Vans Old Skool Negro</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">Vans</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$60.990</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-3">
+                <div class="card ficha-auto">
+                    <img src="/assets/img/vans/vans-classic.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title kanit-semibold">Vans Old Skool Negro</h5>
+                        <h6 class="card-subtitle mb-2 text-body-secondary kanit-light">Vans</h6>
+                        <h5 class="card-title kanit-semibold fs-3">$60.990</h5>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <footer class="container-fluid footer p-3">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 d-flex flex-column justify-content-center">
+                <h4 class="kanit-regular">Acerca de Nosotros</h4>
+                <p class="kanit-light">Nos destacamos por ser una tienda para todos los estilos. Somos una alternativa de calzado con marcas y modelos variados en todas las tallas.<br><br>
+                </p>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 d-flex flex-column align-items-center">
+                <ul>
+                    <li><h4 class="kanit-regular">Dirección</h4></li>
+                    <li><p class="kanit-light">Calle Falsa 123 - Huechuraba</p></li>
+                    <li><h4 class="kanit-regular">Teléfonos</h4></li>
+                    <li><p class="kanit-light">+56 981744765</p></li>
+                    <li><p class="kanit-light">+56 981744765</p></li>
+                    <li><h4 class="kanit-regular">E-mail</h4></li>
+                    <li><p class="kanit-light">atencion@jdc.cl</p></li>
+                </ul>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <h4 class="text-center d-flex justify-content-center kanit-regular">Síguenos en nuestras redes</h4>
+                <ul class="d-flex justify-content-around p-0 mt-4">
+                    <li><a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                    <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
+                    <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2xl"></i></a></li> 
+                </ul>
+                
+            </div>
+        </div>
+    </footer>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/b579bdb183.js" crossorigin="anonymous"></script>
 </body>
 </html>

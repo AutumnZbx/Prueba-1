@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JDC - Compra tus Zapatos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <!-- Fuente de texto NO SACAR-->
@@ -12,22 +13,30 @@
     <!-- Fin Fuente texto-->
 </head>
 <body>
-  <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand kanit-semibold" href="#">Autos del Mar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav kanit-regular">
-                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
-                <a class="nav-link" href="/autos.html">Autos</a>
-                <a class="nav-link" href="/login.html">Ingresar</a>
-            </div>
-        </div>
+      <a class="navbar-brand" href="#">JDC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Zapatillas.html">Zapatillas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/Zapatos.html">Zapatos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login.html">Login</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
-    
 
     <!--Login -->
     <div class="container-fluid d-flex justify-content-center">
@@ -156,12 +165,11 @@
       </div>        
 
 
-    <footer class="container-fluid footer p-3">
+      <footer class="container-fluid footer p-3">
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 d-flex flex-column justify-content-center">
                 <h4 class="kanit-regular">Acerca de Nosotros</h4>
-                <p class="kanit-light">Somos una automotora independiente que desde 2005 nos hemos dedicado a la venta de vehiculos de alta gama.<br><br>
-                Nuestro objetivo es brindar el mejor servicio desde la elección del vehículo, hasta la postventa, donde nos preocupamos de que usted se lleve el auto de sus sueños.
+                <p class="kanit-light">Nos destacamos por ser una tienda para todos los estilos. Somos una alternativa de calzado con marcas y modelos variados en todas las tallas.<br><br>
                 </p>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 d-flex flex-column align-items-center">
@@ -172,13 +180,13 @@
                     <li><p class="kanit-light">+56 981744765</p></li>
                     <li><p class="kanit-light">+56 981744765</p></li>
                     <li><h4 class="kanit-regular">E-mail</h4></li>
-                    <li><p class="kanit-light">ventas@autosdelmar.cl</p></li>
+                    <li><p class="kanit-light">atencion@jdc.cl</p></li>
                 </ul>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <h4 class="text-center d-flex justify-content-center kanit-regular">Síguenos en nuestras redes</h4>
                 <ul class="d-flex justify-content-around p-0 mt-4">
-                    <li><a href="#"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+                    <li><a href="https://www.facebook.com/?locale=es_LA"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
                     <li><a href="https://twitter.com/"><i class="fa-brands fa-twitter fa-2xl"></i></a></li>
                     <li><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-2xl"></i></a></li>
                     <li><a href="https://www.youtube.com/"><i class="fa-brands fa-youtube fa-2xl"></i></a></li> 
