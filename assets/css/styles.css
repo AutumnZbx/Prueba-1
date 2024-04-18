@@ -65,11 +65,11 @@
 }
 .busqueda {
   background-color:#ececec;
-  width:20%;
+  width:15%;
   margin-right:2rem;
 }
-.autos-display {
-  width:80%;
+.zapatos-display {
+  width:95%;
 }
 .autos {
   flex-direction:row;
@@ -78,10 +78,13 @@
   background-color:rgb(175, 128, 78);
   color:white;
 }
-.ficha-auto {
-  width:15rem;
+.ficha-zapato {
+  width:19rem;
+  min-height: 456.8px;
+  min-height: 456.8px;
+  /* Define el tamaño de la ficha para que no queden descuadrados si hay mas de 1 linea de texto
+  en el nombre */
 }
-
 /*Para modificar login*/
 .nav{
   margin: 0 auto;
@@ -101,7 +104,7 @@
 
 /* AQUI VAN LOS MEDIA QUERYS*/
 @media (max-width: 768px){
-  .autos {
+  .pagina-zapatos {
     flex-direction:column !important;
     align-items:center;
   }
@@ -112,12 +115,12 @@
   .autos-display {
     width:100%;
   }
-  .ficha-auto {
+  .ficha-zapato {
     display:flex;
     justify-content:center;
     margin:0 auto;
     margin-top:1rem;
-    max-width:700px;
+    width:18rem;
   }
   .presentacion img {
     width:100%;
