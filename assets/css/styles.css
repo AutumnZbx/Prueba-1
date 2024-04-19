@@ -40,6 +40,13 @@
 .presentacion img {
   width:70%;
 }
+.presentacion-2 {
+  background-color:rgb(78, 123, 175);
+  color:white;
+}
+.presentacion-2 img {
+  width:70%;
+}
 .marcas {
   width:40%;
 }
