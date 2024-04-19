@@ -23,7 +23,7 @@
 }
   
 .kanit-semibold {
-  font-family: "Kanit", sans-serif;
+  font-family: "Kanit", sans-serif !important;
   font-weight: 600;
   font-style: normal;
 }
@@ -84,6 +84,10 @@
   min-height: 456.8px;
   /* Define el tamaño de la ficha para que no queden descuadrados si hay mas de 1 linea de texto
   en el nombre */
+}
+.ficha-zapato:hover{
+  border-color: #2b3035;
+  transition:.2s ease-in;
 }
 /*Para modificar login*/
 .nav{
