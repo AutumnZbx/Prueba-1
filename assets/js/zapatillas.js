@@ -4,9 +4,9 @@ let loadedZapatos = [];
 
 const getZapatos = async() => {
     try{
-        const response = await fetch("https://zapatosapi.onrender.com")
+        const response = await fetch("https://zapatillasapi.onrender.com/")
         const data = await response.json();
-        return data.zapatos;
+        return data.zapatillas;
     } catch(error){
         console.log(`Error al obtener datos: ${error}`);
             return [];
@@ -40,9 +40,9 @@ const createCards = async (zapatos) => {
             link.classList.add('text-decoration-none');
             link.href = "#";
             link.addEventListener("click", ()=>{
-                const url = "../zapatos/zap_detalles.html?";
-                sendItemData(id, url);
-            })
+                const url = "../zapatillas/zap_detalles.html?";
+                 sendItemData(id, url);
+             })
 
             // CREAR CARD
             const card = document.createElement('div');
