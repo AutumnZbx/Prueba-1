@@ -13,6 +13,155 @@ const getZapatos = async() => {
     }
 }
 
+const filterByPrice = async(val) =>{
+
+    const values = {
+        "precio1" : [0,30000],
+        "precio2" : [30000,50000],
+        "precio3" : [50000, 70000],
+        "precio4" : [70000, 90000],
+        "precio5" : [90000, 110000],
+        "precio6" : [110000, 9999999]
+    };
+    let arr = [];
+    let keys = Object.keys(values);
+    for(let i = 0; i< keys.length; i++){
+        if (val === keys[i]) {
+            arr = values[keys[i]]
+        }
+    };
+
+    try{
+        const response = await fetch(`https://zapatosapi.onrender.com/price/${arr[0]}/${arr[1]}`)
+        const data = await response.json();
+        return data.zapatoFound;
+    } catch(error){
+        console.log(`Error al obtener datos: ${error}`);
+            return [];
+    }
+};
+
+const loadFilteredItems = async (val) =>{
+    loadedZapatos = [];
+    filterByPrice(val)
+        .then(data => createCards(data))
+        .catch(error => console.log(error))
+}
+
+const filterByBrand = async (brand) =>{
+    try{
+        const response = await fetch(`https://zapatosapi.onrender.com/brand/${brand}`)
+        const data = await response.json();
+        return data.zapatoFound;
+    } catch(error){
+        console.log(`Error al obtener datos: ${error}`);
+            return [];
+    }
+};
+
+const filterByTag = async (tag) =>{
+    try{
+        const response = await fetch(`https://zapatosapi.onrender.com/tag/${tag}`)
+        const data = await response.json();
+        return data.zapatoFound;
+    } catch(error){
+        console.log(`Error al obtener datos: ${error}`);
+            return [];
+    }
+}
+// BOTONES DE FILTRO GENERO
+
+const hombreCheck = document.getElementById('hombreCheck');
+hombreCheck.addEventListener('click', ()=>{
+    loadedZapatos = [];
+    filterByTag(hombreCheck.value)
+        .then(data => createCards(data))
+})
+const mujerCheck = document.getElementById('mujerCheck');
+mujerCheck.addEventListener('click', () =>{
+    loadedZapatos = [];
+    filterByTag(mujerCheck.value)
+        .then(data => createCards(data))
+})
+const unisexCheck = document.getElementById('unisexCheck');
+unisexCheck.addEventListener('click', () => {
+    loadedZapatos = [];
+    filterByTag(unisexCheck.value)
+        .then(data => createCards(data))
+})
+// BUSQUEDA POR MARCA
+
+const azaleiaCheck = document.getElementById('azaleiaCheck');
+azaleiaCheck.addEventListener('click', () =>{
+    loadedZapatos = [];
+    filterByBrand(azaleiaCheck.value)
+        .then(data => createCards(data))
+        .catch(error => console.log(error))
+})
+const bataCheck = document.getElementById('bataCheck');
+bataCheck.addEventListener('click', () => {
+    loadedZapatos = [];
+    filterByBrand(bataCheck.value)
+        .then(data => createCards(data))
+        .catch(error => console.log(error))
+})
+const guanteCheck = document.getElementById('guanteCheck');
+guanteCheck.addEventListener('click', () => {
+    loadedZapatos = [];
+    filterByBrand(guanteCheck.value)
+        .then(data => createCards(data))
+        .catch(error => console.log(error))
+})
+const hpCheck = document.getElementById('hpCheck');
+hpCheck.addEventListener('click', () =>{
+    loadedZapatos = [];
+    filterByBrand(hpCheck.value)
+        .then(data => createCards(data))
+        .catch(error => console.log(error))
+})
+const merrellCheck = document.getElementById('merrellCheck');
+merrellCheck.addEventListener('click', () => {
+    loadedZapatos = [];
+    filterByBrand(merrellCheck.value)
+        .then(data => createCards(data))
+        .catch(error => console.log(error))
+})
+const panamaCheck = document.getElementById('panamaCheck');
+panamaCheck.addEventListener('click', () =>{
+    loadedZapatos = [];
+    filterByBrand(panamaCheck.value)
+        .then(data => createCards(data))
+        .catch(error => console.log(error))
+})
+
+
+
+// BUSQUEDA EN PRECIOS
+const precioRadio1 = document.getElementById('precioRadio1');
+precioRadio1.addEventListener('click', () =>{
+    loadFilteredItems(precioRadio1.value);
+})
+const precioRadio2 = document.getElementById('precioRadio2');
+precioRadio2.addEventListener('click', () =>{
+    loadFilteredItems(precioRadio2.value);
+})
+const precioRadio3 = document.getElementById('precioRadio3');
+precioRadio3.addEventListener('click', () =>{
+    loadFilteredItems(precioRadio3.value);
+})
+const precioRadio4 = document.getElementById('precioRadio4');
+precioRadio4.addEventListener('click', () =>{
+    loadFilteredItems(precioRadio4.value);
+})
+const precioRadio5 = document.getElementById('precioRadio5');
+precioRadio5.addEventListener('click', () =>{
+    loadFilteredItems(precioRadio5.value);
+})
+const precioRadio6 = document.getElementById('precioRadio6');
+precioRadio6.addEventListener('click', () =>{
+    loadFilteredItems(precioRadio6.value);
+})
+
 
 // getZapatos()
 //     .then(data => console.log(data))
@@ -20,7 +169,7 @@ const getZapatos = async() => {
 
 const createCards = async (zapatos) => {
     const zapatosRow = document.getElementById('zapatosRow');
-
+    zapatosRow.innerHTML = "";
     zapatos.map((zapato) => {
         const { id, name, brand, price, img } = zapato;
         if (!loadedZapatos.includes(id)){
