@@ -178,42 +178,104 @@
   }
 }
 
+/* Estilos del carrito */
+#carritoCol {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
 
-/*Ver carro de compras */
-  @media (min-width: 1025px) {
-  .h-custom {
-  height: 100vh !important;
-  }
-  }
-  
-  .card-registration .select-input.form-control[readonly]:not([disabled]) {
-  font-size: 1rem;
-  line-height: 2.15;
-  padding-left: .75em;
-  padding-right: .75em;
-  }
-  
-  .card-registration .select-arrow {
-  top: 13px;
-  }
-  
-  .bg-grey {
-  background-color: #eae8e8;
-  }
-  
-  @media (min-width: 992px) {
-  .card-registration-2 .bg-grey {
-  border-top-right-radius: 16px;
-  border-bottom-right-radius: 16px;
-  }
-  }
-  
-  @media (max-width: 991px) {
-  .card-registration-2 .bg-grey {
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  }
-  }
+.card-registration-2 {
+  background-color: #f8f9fa;
+}
+
+.bg-grey {
+  background-color: #f8f9fa !important;
+}
+
+.item-quantity {
+  width: 70px;
+  text-align: center;
+}
+
+.item-price {
+  font-weight: bold;
+}
+
+.remove-item {
+  color: #dc3545;
+}
+
+.remove-item:hover {
+  color: #c82333;
+  text-decoration: none;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #23272b;
+}
+
+/* Otros estilos */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem !important;
+}
+
+.my-4 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.kanit-semibold {
+  font-weight: 600;
+}
+
+.kanit-light {
+  font-weight: 300;
+}
+
+.kanit-regular {
+  font-weight: 400;
+}
+
 
   /* LOGIN FALTA CAMBIAR COLORES Y AGREGAR UNA IMAGEN DE FONDO */
 .login-container {

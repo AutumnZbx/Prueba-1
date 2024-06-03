@@ -1,5 +1,6 @@
 let listaItems = [];
 let cuentaPrecios = 0;
+let compraRealizada = false;
 
 const readAllStorage = () => {
     listaItems = [];
@@ -85,7 +86,10 @@ const attachEventListeners = () => {
     document.getElementById('selectEnvio').addEventListener('change', updateTotalPrice);
 
     document.getElementById('comprarBtn').addEventListener('click', function() {
-        alert('¡Compra exitosa! Gracias por tu compra.');
+        if (!compraRealizada) {
+            alert('¡Compra exitosa! Gracias por tu compra.');
+            compraRealizada = true;
+        }
     });
     
 }
