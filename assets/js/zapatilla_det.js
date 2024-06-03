@@ -1,6 +1,8 @@
 import { sendItemData } from "./functions/sendItemData.js";
 import { getTagSimilar } from "./functions/getTagSimilar.js";
 
+let datosProducto = {};
+
 const getZapatoById = async (id) => {
     try {
         const response = await fetch(`https://zapatillasapi.onrender.com/${id}`)
@@ -12,7 +14,6 @@ const getZapatoById = async (id) => {
         return {};
     }
 }
-
 
 const getParams = async() => {
     let params = new URLSearchParams(window.location.search),
@@ -28,6 +29,11 @@ const getParams = async() => {
     const detalleImagen2 = document.getElementById("detalleImagen2");
     const detalleImagen3 = document.getElementById("detalleImagen3");
     const detalleTallas = document.getElementById("detalleTallas");
+    const btnAgregar = document.getElementById('btnAgregar');
+    const tallaEscogida = document.getElementById('tallaEscogida');
+    const warnTalla = document.getElementById('warnTalla');
+    const cantidadItem = document.getElementById('cantidadItem');
+    let tallaNumero;
 
     if (typeof(data) === "undefined") {
         document.title = `JDC - No encontrado`;
@@ -35,8 +41,10 @@ const getParams = async() => {
         detalleMarca.textContent = "N/a";
         detallePrecio.textContent = `$ 0`;
         detalleDesc.textContent = "El producto no fue encontrado o no hay existencias.";
+        btnAgregar.textContent = "No disponible";
+        btnAgregar.classList.add("disabled");
     } else {
-        const { name, brand, price, img, sizes, desc, tag } = data;
+        const { id, name, brand, price, img, sizes, desc, tag } = data;
 
         document.title = `JDC - Zapatos - ${name} - ${brand}`;
         detalleNombre.textContent = name;
@@ -60,14 +68,39 @@ const getParams = async() => {
             numTalla.classList.add("m-0");
             numTalla.textContent = parseInt(talla);
 
+            cuadroTalla.addEventListener('click', ()=>{
+                tallaNumero = numTalla.textContent;
+                tallaEscogida.textContent = `Talla escogida: ${tallaNumero}`;
+                warnTalla.textContent = "";
+            })
+
             cuadroTalla.appendChild(numTalla);
             detalleTallas.appendChild(cuadroTalla);
         })
+
+        btnAgregar.addEventListener('click', (e) =>{
+            e.preventDefault();
+            if (tallaEscogida.textContent === ""){
+                warnTalla.style.color = "red";
+                warnTalla.textContent = "Debe escoger una talla";
+            } else {
+                datosProducto = {
+                    "id" : id,
+                    "name" : name,
+                    "brand" : brand,
+                    "price" : price,
+                    "qty" : parseInt(cantidadItem.value),
+                    "size" : parseInt(tallaNumero),
+                    "img" : img
+                }
+                localStorage.setItem(id.toString(), JSON.stringify(datosProducto));
+                alert("Producto añadido al carrito");
+            }
+        });
         const apiUrl = "https://zapatillasapi.onrender.com/tag/";
         const tags = await getTagSimilar(tag[0], apiUrl);
         createLikeCards(tags);
     }
-
 }
 
  const createLikeCards = async (data) =>{

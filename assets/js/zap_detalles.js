@@ -1,6 +1,8 @@
 import { sendItemData } from "./functions/sendItemData.js";
 import { getTagSimilar } from "./functions/getTagSimilar.js";
 
+let datosProducto = {};
+
 const getZapatoById = async (id) => {
     try {
         const response = await fetch(`https://zapatosapi.onrender.com/${id}`)
@@ -27,6 +29,8 @@ const getParams = async() => {
     const detalleImagen2 = document.getElementById("detalleImagen2");
     const detalleImagen3 = document.getElementById("detalleImagen3");
     const detalleTallas = document.getElementById("detalleTallas");
+    const btnAgregar = document.getElementById('btnAgregar');
+    const tallaEscogida = document.getElementById('tallaEscogida');
 
     if (typeof(data) === "undefined") {
         document.title = `JDC - No encontrado`;
@@ -34,6 +38,8 @@ const getParams = async() => {
         detalleMarca.textContent = "N/a";
         detallePrecio.textContent = `$ 0`;
         detalleDesc.textContent = "El producto no fue encontrado o no hay existencias.";
+        btnAgregar.textContent = "No disponible";
+        btnAgregar.classList.add("disabled");
     } else {
         const { name, brand, price, img, sizes, desc, tag } = data;
 
@@ -59,9 +65,19 @@ const getParams = async() => {
             numTalla.classList.add("m-0");
             numTalla.textContent = parseInt(talla);
 
+            cuadroTalla.addEventListener('click', ()=>{
+                tallaEscogida.textContent = `Talla escogida: ${numTalla.textContent}`;
+            })
+
             cuadroTalla.appendChild(numTalla);
             detalleTallas.appendChild(cuadroTalla);
 
+        })
+
+        btnAgregar.addEventListener('click', () =>{
+            if (tallaEscogida.textContent === ""){
+                console.log("Debe escoger una talla")
+            }
         })
 
         const apiUrl = "https://zapatosapi.onrender.com/tag/";
