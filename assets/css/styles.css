@@ -221,11 +221,12 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  background-image: url(./fondo.jpg);
+  
 }
 
 .login-section {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 40px 20px;
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -264,12 +265,12 @@
 
 #loginForm input[type="text"]:focus,
 #loginForm input[type="password"]:focus {
-  border-color: #ff416c;
+  border-color: #ff6326;
   outline: none;
 }
 
 #loginForm input[type="submit"] {
-  background-color: #ff416c;
+  background-color: #dd1515;
   color: #fff;
   padding: 12px;
   border: none;
@@ -280,7 +281,7 @@
 }
 
 #loginForm input[type="submit"]:hover {
-  background-color: #e63950;
+  background-color: #cf5d00;
 }
 
 .login-section p {
@@ -290,7 +291,7 @@
 }
 
 .login-section p a {
-  color: #ff416c;
+  color: #dd4315;
   text-decoration: none;
   font-weight: bold;
 }
@@ -343,7 +344,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  background-image: url(./fondo.jpg);
 }
 
 .signup-section {
