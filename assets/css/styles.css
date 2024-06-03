@@ -178,4 +178,348 @@
   }
 }
 
+/* Estilos del carrito */
+#carritoCol {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-registration-2 {
+  background-color: #f8f9fa;
+}
+
+.bg-grey {
+  background-color: #f8f9fa !important;
+}
+
+.item-quantity {
+  width: 70px;
+  text-align: center;
+}
+
+.item-price {
+  font-weight: bold;
+}
+
+.remove-item {
+  color: #dc3545;
+}
+
+.remove-item:hover {
+  color: #c82333;
+  text-decoration: none;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+  border: none;
+}
+
+.btn-dark:hover {
+  background-color: #23272b;
+}
+
+/* Otros estilos */
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.pt-1 {
+  padding-top: 0.25rem;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem !important;
+}
+
+.my-4 {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.kanit-semibold {
+  font-weight: 600;
+}
+
+.kanit-light {
+  font-weight: 300;
+}
+
+.kanit-regular {
+  font-weight: 400;
+}
+
+
+  /* LOGIN FALTA CAMBIAR COLORES Y AGREGAR UNA IMAGEN DE FONDO */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./fondo.jpg);
+  
+}
+
+.login-section {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#loginForm label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+#loginForm input[type="text"],
+#loginForm input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#loginForm input[type="text"]:focus,
+#loginForm input[type="password"]:focus {
+  border-color: #ff6326;
+  outline: none;
+}
+
+#loginForm input[type="submit"] {
+  background-color: #dd1515;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#loginForm input[type="submit"]:hover {
+  background-color: #cf5d00;
+}
+
+.login-section p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.login-section p a {
+  color: #dd4315;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Alertas*/
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  opacity: 0.9;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+/* Registro Falta cambiar colores y poner foto de fondo */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(./fondo.jpg);
+}
+
+.signup-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.signup-section h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+#signupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#signupForm label {
+  display: block;
+  font-size: 14px;
+  color: #666;
+}
+
+#signupForm input[type="text"],
+#signupForm input[type="email"],
+#signupForm input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+#signupForm input[type="text"]:focus,
+#signupForm input[type="email"]:focus,
+#signupForm input[type="password"]:focus {
+  border-color: #ff416c;
+  outline: none;
+}
+
+#signupForm input[type="submit"] {
+  background-color: #ff416c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+#signupForm input[type="submit"]:hover {
+  background-color: #e63950;
+}
+
+.signup-section p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup-section p a {
+  color: #ff416c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-section p a:hover {
+  text-decoration: underline;
+}
+
+/* Alertas */
+.alert {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  position: relative;
+  opacity: 0.9;
+}
+
+.alert.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.alert.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closebtn:hover {
+  color: black;
+}
 
