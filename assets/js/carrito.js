@@ -83,6 +83,11 @@ const attachEventListeners = () => {
     });
 
     document.getElementById('selectEnvio').addEventListener('change', updateTotalPrice);
+
+    document.getElementById('comprarBtn').addEventListener('click', function() {
+        alert('¡Compra exitosa! Gracias por tu compra.');
+    });
+    
 }
 
 const updateItemQty = (event) => {
