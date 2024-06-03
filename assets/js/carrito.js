@@ -1,176 +1,132 @@
-
 let listaItems = [];
 let cuentaPrecios = 0;
-let precioCambiante = 0;
 
-const readAllStorage = () =>{
-    const strg = localStorage
+const readAllStorage = () => {
+    listaItems = [];
+    const strg = localStorage;
     for (let i = 0; i < strg.length; i++) {
-        listaItems.push(JSON.parse(strg.getItem(strg.key(i))));
-    };
-    addItemsToCart(listaItems);
+        const item = JSON.parse(strg.getItem(strg.key(i)));
+        if (isValidItem(item)) {
+            listaItems.push(item);
+        }
+    }
+    renderCart(listaItems);
 }
 
-const addItemsToCart = (items) => {
+const isValidItem = (item) => {
+    return item && item.id && item.name && item.brand && item.price && item.qty && item.img && item.size;
+}
+
+const renderCart = (items) => {
     const carritoCol = document.getElementById('carritoCol');
     const itemCount = document.getElementById('itemCount');
     const subtTotal = document.getElementById('subTotal');
-    const selectEnvio = document.getElementById('selectEnvio');
     const totalPrice = document.getElementById('totalPrice');
+    const selectEnvio = document.getElementById('selectEnvio');
+
+    carritoCol.innerHTML = `
+        <div class="d-flex justify-content-between align-items-center mb-5">
+            <h1 class="fw-bold mb-0 kanit-semibold">Detalle</h1>
+            <h6 class="mb-0 text-muted kanit-light" id="itemCount"></h6>
+        </div>
+        <hr class="my-4">`;
 
     let count = 0;
     let sumPrice = 0;
-    items.map((item) => {
-        const { id, name, brand, price, qty, img } = item;
-        
+
+    items.forEach((item) => {
+        const { id, name, brand, price, qty, img, size } = item;
+        count += 1;
+        sumPrice += price * qty;
 
         const mainRow = document.createElement('div');
-        mainRow.classList.add("row");
-        mainRow.classList.add("mb-4");
-        mainRow.classList.add("d-flex");
-        mainRow.classList.add("justify-content-between");
-        mainRow.classList.add("align-items-center");
+        mainRow.classList.add("row", "mb-4", "d-flex", "justify-content-between", "align-items-center");
 
-        const colImg = document.createElement('div');
-        colImg.classList.add("col-md-2");
-        colImg.classList.add("col-lg-2");
-        colImg.classList.add("col-xl-2");
-
-        const image = document.createElement('img');
-        image.classList.add("img-fluid");
-        image.classList.add("rounded-3");
-        image.src = img;
-        image.alt = name;
-
-        const colTxt = document.createElement('div');
-        colTxt.classList.add("col-md-3");
-        colTxt.classList.add("col-lg-3");
-        colTxt.classList.add("col-xl-3");
-
-        const brandText = document.createElement('h6');
-        brandText.classList.add("text-muted");
-        brandText.classList.add("kanit-light");
-        brandText.textContent = brand;
-
-        const nameText = document.createElement('h6');
-        nameText.classList.add("text-black");
-        nameText.classList.add("mb-0");
-        nameText.classList.add("kanit-regular");
-        nameText.textContent = name;
-
-        const itemAddCol = document.createElement('div');
-        itemAddCol.classList.add("col-md-3");
-        itemAddCol.classList.add("col-lg-3");
-        itemAddCol.classList.add("col-xl-3");
-
-        const itemAdd = document.createElement('input');
-        itemAdd.type = "number";
-        itemAdd.value = qty;
-        let cantidad = qty
-        itemAdd.min = "1";
-        itemAdd.max = "99";
-        itemAdd.name = "cantidad";
-
-        const priceCol = document.createElement('div');
-        priceCol.classList.add("col-md-3");
-        priceCol.classList.add("col-lg-2");
-        priceCol.classList.add("col-xl-2");
-        priceCol.classList.add("offset-lg-1");
-
-        const priceText = document.createElement('h6');
-        priceText.classList.add("mb-0");
-        priceText.classList.add("kanit-regular");
-        let priceXqty = price*itemAdd.value;
-        priceText.textContent = "$"
-        priceText.textContent += ` ${priceXqty}`;
-        sumPrice += price*itemAdd.value;
-
-        const delAnchor = document.createElement('a');
-        delAnchor.classList.add("text-muted");
-        delAnchor.addEventListener('click', () =>{
-            console.log(localStorage.getItem(id))
-            localStorage.removeItem(id.toString());
-            location.reload();
-        });
-        delAnchor.href = "";
-
-        const colIco = document.createElement('div');
-        colIco.classList.add("col-md-1");
-        colIco.classList.add("col-lg-1");
-        colIco.classList.add("col-xl-1");
-        colIco.classList.add("text-end");
-
-        const delIco = document.createElement('i');
-        delIco.classList.add('fas');
-        delIco.classList.add('fa-times');
-
-        const sep = document.createElement('hr');
-        sep.classList.add("my-4");
-
-        colImg.appendChild(image);
-        colTxt.appendChild(brandText);
-        colTxt.appendChild(nameText);
-
-        itemAddCol.appendChild(itemAdd);
-
-        priceCol.appendChild(priceText);
-
-        colIco.appendChild(delAnchor);
-        delAnchor.appendChild(delIco);
-
-        mainRow.appendChild(colImg);
-        mainRow.appendChild(colTxt);
-        mainRow.appendChild(itemAddCol);
-        mainRow.appendChild(priceCol);
-        mainRow.appendChild(colIco)
+        mainRow.innerHTML = `
+            <div class="col-md-2 col-lg-2 col-xl-2">
+                <img src="${img}" class="img-fluid rounded-3" alt="${name}">
+            </div>
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <h6 class="text-muted kanit-light">${brand}</h6>
+                <h6 class="text-black mb-0 kanit-regular">${name}</h6>
+                <h6 class="text-black mb-0 kanit-regular">Tamaño: ${size}</h6>
+            </div>
+            <div class="col-md-3 col-lg-3 col-xl-3">
+                <input type="number" class="form-control form-control-lg item-quantity" value="${qty}" min="1" max="99" data-id="${id}" data-price="${price}">
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                <h6 class="mb-0 kanit-regular item-price">$${price * qty}</h6>
+            </div>
+            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                <a href="#" class="text-muted remove-item" data-id="${id}"><i class="fas fa-times"></i></a>
+            </div>
+            <hr class="my-4">`;
 
         carritoCol.appendChild(mainRow);
-        carritoCol.appendChild(sep);
-        count += 1;
-
-        itemAdd.addEventListener('change', () =>{
-            if (cantidad < itemAdd.value){
-                cuentaPrecios += price;
-            } else {
-                cuentaPrecios -= price;
-            }
-            cantidad = itemAdd.value;
-            precioCambiante = price*itemAdd.value;
-            priceText.textContent = `$ ${precioCambiante}`;
-
-            updateSum(cuentaPrecios);
-            totalPrice.textContent = `$ ${updateTotal(selectEnvio.selectedIndex, cuentaPrecios)}`;
-        });
-    })
-    itemCount.textContent = `${parseInt(count)} Items`;
-    subtTotal.textContent += `${sumPrice}`;
-    cuentaPrecios = sumPrice;
-    totalPrice.textContent += ` ${updateTotal(selectEnvio.selectedIndex, cuentaPrecios)}`;
-    selectEnvio.addEventListener('change', () =>{
-        totalPrice.textContent = `$ ${updateTotal(selectEnvio.selectedIndex, cuentaPrecios)}`;
     });
-};
 
+    itemCount.textContent = `${count} Items`;
+    subtTotal.textContent = `$${sumPrice}`;
+    cuentaPrecios = sumPrice;
+    totalPrice.textContent = `$${updateTotal(selectEnvio.value, sumPrice)}`;
 
-const updateTotal = (val, suma) => {
-    const preciosEnvio = {
-        "0" : 3500,
-        "1" : 5000,
-        "2" : 4500,
-        "3" : 7000
-    };
-    let despacho = 0;
-    const keys = Object.keys(preciosEnvio);
-    for (let i = 0; i< keys.length; i++){
-        if (val.toString() === keys[i]){
-            despacho = preciosEnvio[keys[i]];
-        }
+    attachEventListeners();
+}
+
+const attachEventListeners = () => {
+    document.querySelectorAll('.item-quantity').forEach(item => {
+        item.addEventListener('change', updateItemQty);
+    });
+
+    document.querySelectorAll('.remove-item').forEach(item => {
+        item.addEventListener('click', removeItem);
+    });
+
+    document.getElementById('selectEnvio').addEventListener('change', updateTotalPrice);
+}
+
+const updateItemQty = (event) => {
+    const id = event.target.getAttribute('data-id');
+    const newQty = parseInt(event.target.value);
+    const price = parseFloat(event.target.getAttribute('data-price'));
+
+    const item = listaItems.find(item => item.id.toString() === id);
+    if (item) {
+        item.qty = newQty;
+        localStorage.setItem(id, JSON.stringify(item));
+        updateCart();
     }
-    return suma+despacho;
 }
 
-const updateSum = (suma) => {
-    const subtTotal = document.getElementById('subTotal');
-    subtTotal.textContent = `$ ${suma}`;
+const removeItem = (event) => {
+    event.preventDefault();
+    const id = event.target.closest('a').getAttribute('data-id');
+
+    localStorage.removeItem(id);
+    listaItems = listaItems.filter(item => item.id.toString() !== id);
+
+    updateCart();
 }
+
+const updateCart = () => {
+    renderCart(listaItems);
+}
+
+const updateTotal = (envio, subtotal) => {
+    const preciosEnvio = {
+        "1": 3500,
+        "2": 5000,
+        "3": 4500,
+        "4": 7000
+    };
+    const envioCost = preciosEnvio[envio] || 0;
+    return subtotal + envioCost;
+}
+const updateTotalPrice = () => {
+    const selectEnvio = document.getElementById('selectEnvio');
+    const totalPrice = document.getElementById('totalPrice');
+
+    totalPrice.textContent = `$${updateTotal(selectEnvio.value, cuentaPrecios)}`;
+}
+
 window.onload = readAllStorage;
