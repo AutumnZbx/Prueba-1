@@ -523,3 +523,19 @@
   color: black;
 }
 
+/* fondo */
+.pagina-zapatos {
+  background-image: url(./fondo.jpg); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.carro {
+  background-image: url(./fondo.jpg); 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  width: 100%; 
+  height: 100vh; 
+}
